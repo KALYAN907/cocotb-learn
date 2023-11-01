@@ -5,11 +5,3 @@ module or_gate(
 );
 assign y=a|b;
 endmodule
-
-
-
-
-
-
-
-
