@@ -1,7 +1,10 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 VERILOG_SOURCES += $(PWD)/../hdl/or_gate.v
+
 VERILOG_SOURCES += $(PWD)/../hdl/dut.v
+VERILOG_SOURCES += $(PWD)/wrappers/dut.v
+
 VERILOG_SOURCES += $(PWD)/wrappers/or_test.v
 VERILOG_SOURCES += $(PWD)/wrappers/ifc_test.v
 VERILOG_SOURCES += $(PWD)/../hdl/ifc_or.v
