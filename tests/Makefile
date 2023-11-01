@@ -3,7 +3,7 @@ TOPLEVEL_LANG ?= verilog
 VERILOG_SOURCES += $(PWD)/../hdl/or_gate.v
 
 VERILOG_SOURCES += $(PWD)/../hdl/dut.v
-VERILOG_SOURCES += $(PWD)/wrappers/dut.v
+VERILOG_SOURCES += $(PWD)/wrappers/dut_test.v
 
 VERILOG_SOURCES += $(PWD)/wrappers/or_test.v
 VERILOG_SOURCES += $(PWD)/wrappers/ifc_test.v
@@ -13,7 +13,7 @@ VERILOG_SOURCES += $(PWD)/../hdl/FIFO2.v
 all: or ifc dut
 dut:
 	rm -rf sim_build
-	$(MAKE) sim MODULE=test TOPLEVEL=dut
+	$(MAKE) sim MODULE=dut_test TOPLEVEL=dut_test
 or:
 	rm -rf sim_build
 	$(MAKE) sim MODULE=or_test TOPLEVEL=or_test
