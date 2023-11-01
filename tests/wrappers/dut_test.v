@@ -9,8 +9,8 @@ module dut_test (
     output wire RDY_next
 );
 
-    // Instantiate the original "dut" module
-    dut original_dut (
+
+    dut dut (
         .CLK(CLK),
         .RST_N(RST_N),
         .EN_start(EN_start),
@@ -21,7 +21,10 @@ module dut_test (
         .RDY_next(RDY_next)
     );
 
-
+initial begin
+    $dumpfile("waves.vcd");
+	$dumpvars;
+end
 
 endmodule
 
