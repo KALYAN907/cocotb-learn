@@ -13,7 +13,7 @@ VERILOG_SOURCES += $(PWD)/../hdl/FIFO2.v
 all: dut  
 dut:
 	rm -rf sim_build
-	$(MAKE) sim MODULE=test TOPLEVEL=dut
+	$(MAKE) sim MODULE=test TOPLEVEL=dut_test
 or:
 	rm -rf sim_build
 	$(MAKE) sim MODULE=or_test TOPLEVEL=or_test
